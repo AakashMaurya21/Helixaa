@@ -2,9 +2,10 @@
   "name": "helixaa",
   "version": "1.0.0",
   "description": "Helixaa is an open-source, cross-platform scientific illustration app built with Electron. Create biology figures, pathways, cell diagrams, and research graphics with a clean, modern UI, completely free and offline.",
-  "main": "./electron/main/main.js",
+  "main": "./electron/main/index.js",
   "scripts": {
-    "start": "electron ."
+    "build": "webpack",
+    "start": "npm run build && electron ."
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,19 @@
   },
   "homepage": "https://github.com/AakashMaurya21/Helixaa#readme",
   "devDependencies": {
-    "electron": "^40.0.0"
+    "@babel/core": "^7.28.6",
+    "@babel/preset-env": "^7.28.6",
+    "@babel/preset-react": "^7.28.5",
+    "babel-loader": "^10.0.0",
+    "electron": "^40.0.0",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
+  },
+  "dependencies": {
+    "konva": "^10.2.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-konva": "^19.2.1"
   }
 }
